@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
 
@@ -12,8 +12,8 @@ class App extends Component {
       currentFilter: "all", //all, active, complete
       todoItems: [
         { title:"Go to shcool", isComplete: true },
-        { title:"Do homework" },
-        { title:"Go to market" },
+        { title:"Do homework", isComplete: false },
+        { title:"Go to market", isComplete: false },
       ]
     }
 
@@ -82,6 +82,7 @@ class App extends Component {
       if(currentFilter === 'all') return item;
       if(currentFilter === 'active' && (item.isComplete === false || !item.isComplete)) return item;
       if(currentFilter === 'complete' && item.isComplete === true) return item;
+      else return null;
     })
 
     return (
@@ -92,9 +93,9 @@ class App extends Component {
             return <TodoItem key={index} item={item} onClick={this.onItemClick(item)}/>
           })
         }
-        <button type="button" onClick={this.onFilter("all")}>All</button>
-        <button type="button" onClick={this.onFilter("active")}>Active</button>
-        <button type="button" onClick={this.onFilter("complete")}>Complete</button>
+        <button className="btn btn-primary" type="button" onClick={this.onFilter("all")}>All</button>
+        <button className="btn btn-primary" type="button" onClick={this.onFilter("active")}>Active</button>
+        <button className="btn btn-primary" type="button" onClick={this.onFilter("complete")}>Complete</button>
       </div>
     );
   }
