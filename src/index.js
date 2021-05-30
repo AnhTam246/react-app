@@ -11,13 +11,13 @@ import TopMenu from './components/TopMenu';
 //import AppAccordion from './AppAccordion';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     {/* <App /> */}
     <TopMenu />
     <RouterTest />
     {/* <Ref /> */}
     {/* <AppAccordion /> */}
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 
