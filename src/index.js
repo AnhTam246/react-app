@@ -4,9 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import AppAccordion from './AppAccordion';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    {/* <AppAccordion /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -5,8 +5,6 @@ class TodoItem extends Component {
   render() {
     const { item, onClick } = this.props;
     
-    // console.log(item);
-
     return (
       <div onClick={onClick} className={item.isComplete === true ? "TodoItem-complete" : "TodoItem"}>
         <p>{item.title}</p>
